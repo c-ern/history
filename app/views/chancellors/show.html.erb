@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @chancellor.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @chancellor.last_name %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @chancellor.birthday %>
+</p>
+
+<p>
+  <b>Day of death:</b>
+  <%= @chancellor.day_of_death %>
+</p>
+
+<p>
+  <b>Inauguration:</b>
+  <%= @chancellor.inauguration %>
+</p>
+
+
+<%= link_to 'Edit', edit_chancellor_path(@chancellor) %> |
+<%= link_to 'Back', chancellors_path %>

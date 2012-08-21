@@ -1,0 +1,31 @@
+<h1>Listing chancellors</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Birthday</th>
+    <th>Day of death</th>
+    <th>Inauguration</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chancellors.each do |chancellor| %>
+  <tr>
+    <td><%= chancellor.first_name %></td>
+    <td><%= chancellor.last_name %></td>
+    <td><%= chancellor.birthday %></td>
+    <td><%= chancellor.day_of_death %></td>
+    <td><%= chancellor.inauguration %></td>
+    <td><%= link_to 'Show', chancellor %></td>
+    <td><%= link_to 'Edit', edit_chancellor_path(chancellor) %></td>
+    <td><%= link_to 'Destroy', chancellor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chancellor', new_chancellor_path %>

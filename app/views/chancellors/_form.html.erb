@@ -1,0 +1,37 @@
+<%= form_for(@chancellor) do |f| %>
+  <% if @chancellor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chancellor.errors.count, "error") %> prohibited this chancellor from being saved:</h2>
+
+      <ul>
+      <% @chancellor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :day_of_death %><br />
+    <%= f.date_select :day_of_death %>
+  </div>
+  <div class="field">
+    <%= f.label :inauguration %><br />
+    <%= f.date_select :inauguration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
